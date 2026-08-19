@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>cutesiavrok</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="love-page">
+
+  <div class="computer-window">
+
+    <div class="top-bar">
+      <span>LOVE</span>
+      <span>— 0x</span>
+    </div>
+
+    
+    <div class="heart-header">
+
+      <span>♥</span>
+      <i>·</i>
+      <span>♥</span>
+      <i>·</i>
+      <span>♥</span>
+
+    </div>
+
+        <div class="pixel-screen">
+
+      <div id="questionBox">
+
+        <p class="question">
+          Do you love me?
+        </p>
+
+                <div class="cat-area">
+
+          <div class="cat">
+
+            <div class="ear left-ear"></div>
+            <div class="ear right-ear"></div>
+
+            <div class="cat-head">
+
+              <div class="eye left-eye"></div>
+              <div class="eye right-eye"></div>
+
+              <div class="cheek left-cheek">=</div>
+              <div class="cheek right-cheek">=</div>
+
+              <div class="nose"></div>
+
+            </div>
+
+            <div class="cat-body"></div>
+
+            <div class="cat-heart">
+              ♥
+            </div>
+
+            <div class="tail"></div>
+
+          </div>
+
+          <button class="no" onmouseenter="runAway(this)">
+            NO
+          </button>
+
+        </div>
+
+        <button class="yes" onclick="showLetter()">
+          YES
+        </button>
+
+      </div>
+
+
+           <div id="letterBox">
+
+        <div class="letter">
+
+          <div class="letter-header">
+            ♡ FOR RII ♡
+          </div>
+
+          <div class="letter-content">
+
+            <p>Hiii riii </p>
+
+            <p>
+              idk where to start kasi ang random ko diba,
+              HAHAHAHHA so what naman.
+            </p>
+
+            <p>
+              eto na nga, ik we're just friends or whattt
+              pero i kinda wanna get to know you more
+              like legit, not just random chats ganern,
+              who knows diba maybe we can hit it off HAHAHA.
+            </p>
+
+            <p>
+              wala lang, feel ko kasi you're actually interesting
+              tapos ang gaan mo kausap. no pressure naman or anything.
+            </p>
+
+            <p>
+              and if okay lang sayo, we can talk more often
+              or kahit random chika lang.
+            </p>
+
+            <p>
+              pero honestly habang tumatagal parang iba na yung
+              dating mo sakin. like hinahanap na kita kausap
+              and mas gusto ko na ikaw yung kinakausap ko kesa sa iba.
+            </p>
+
+            <p>
+              gets mo bakooooo 
+              wala ako gana sa iba, sayo meron.
+            </p>
+
+            <p>
+              dko rin alam when it started, bigla ko nalang
+              napansin na parang you became kinda special to me
+              without me even trying HAHAHA
+            </p>
+
+            <p>
+              i'm not saying this para maging awkward or para
+              i-pressure ka ha. i just wanna be real lang.
+              sayang din kasi if i keep it to myself.
+            </p>
+
+            <p>
+              so ayun if ever lang naman, i kinda wanna see
+              if there's something more than this.
+              if wala, it's okay naman (cuteko) 
+            </p>
+
+          </div>
+
+          <div class="signature">
+            – avrok 💌
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    function showLetter() {
+
+      const question = document.getElementById("questionBox");
+      const letter = document.getElementById("letterBox");
+
+      question.classList.add("hide");
+
+      setTimeout(() => {
+
+        question.style.display = "none";
+        letter.style.display = "block";
+
+        setTimeout(() => {
+          letter.classList.add("show");
+        }, 50);
+
+      }, 400);
+    }
+
+
+    function runAway(button) {
+
+      const screen =
+        document.querySelector(".pixel-screen");
+
+      const rect =
+        screen.getBoundingClientRect();
+
+      const buttonWidth =
+        button.offsetWidth;
+
+      const buttonHeight =
+        button.offsetHeight;
+
+      const maxX =
+        rect.width - buttonWidth - 20;
+
+      const maxY =
+        rect.height - buttonHeight - 20;
+
+      const x =
+        Math.random() * maxX;
+
+      const y =
+        Math.random() * maxY;
+
+      button.style.position = "absolute";
+      button.style.left = x + "px";
+      button.style.top = y + "px";
+    }
+
+  </script>
+
+</body>
+</html>

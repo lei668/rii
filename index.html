@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Letter for Rii!!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="intro-page">
+
+  <div class="floating-hearts"></div>
+
+  <main class="intro-content">
+
+    <div class="envelope" onclick="openLetter()">
+      <div class="flap"></div>
+      <div class="heart-seal">♥</div>
+    </div>
+
+    <div class="intro-title">
+      ♡ Letter for Rii!! ♡
+    </div>
+
+  </main>
+
+  <script>
+    function openLetter() {
+      window.location.href = "love.html";
+    }
+
+    const container = document.querySelector(".floating-hearts");
+
+    for (let i = 0; i < 45; i++) {
+      const heart = document.createElement("span");
+      heart.innerHTML = Math.random() > 0.5 ? "♡" : "♥";
+
+      heart.style.left = Math.random() * 100 + "%";
+      heart.style.top = Math.random() * 100 + "%";
+      heart.style.animationDelay = Math.random() * 2 + "s";
+
+      container.appendChild(heart);
+    }
+  </script>
+
+</body>
+</html>
